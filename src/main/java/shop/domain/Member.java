@@ -13,6 +13,10 @@ public class Member {
 
     private String name;
 
+    private String city;
+    private String streetName;
+    private String zipcode;
+
     //----------
     public Long getId() {
         return id;
@@ -28,5 +32,29 @@ public class Member {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 }
