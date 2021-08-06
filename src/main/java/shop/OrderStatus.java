@@ -1,6 +1,6 @@
 package shop;
 
-public enum Status {
+public enum OrderStatus {
     ORDER,
     CANCEL
 }
