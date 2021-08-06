@@ -15,6 +15,8 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
+            <!-- 새로 추가, 일괄 처리 명령, 10개의 객체까지-->
+            <property name="hibernate.jdbc.batch_size" value="10"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
             <!-- 원래 테이블 만들고 레코드 넣어야 됬는데 자동으로 테이블을 만들어주네 -->
         </properties>
