@@ -1,5 +1,7 @@
 package shop.domain;
 
+import shop.domain.item.Item;
+
 import javax.persistence.*;
 
 /*

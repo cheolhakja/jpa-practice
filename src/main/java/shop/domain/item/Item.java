@@ -1,4 +1,4 @@
-package shop.domain;
+package shop.domain.item;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
