@@ -1,10 +1,11 @@
 package shop.domain.item;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "child_table", discriminatorType = DiscriminatorType.STRING)
+//@DiscriminatorValue()
 public class Item {
     @Id
     @GeneratedValue
