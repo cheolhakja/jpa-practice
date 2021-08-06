@@ -1,6 +1,6 @@
 package shop.domain;
 
-import shop.Status;
+import shop.OrderStatus;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -8,6 +8,9 @@ import java.time.LocalDateTime;
 /*
 Member(일) --- (다)Order
 연관관계 주인 : Order
+
+Order(1) --- (1)Delivery
+연관관계 주인 설정하는 법?
  */
 @Entity
 public class Orders {
@@ -18,11 +21,15 @@ public class Orders {
     private LocalDateTime orderDate;
 
     @Enumerated(value = EnumType.STRING )
-    private Status orderStatus;
+    private OrderStatus orderStatus;
 
     @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;
+
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
+    private Delivery delivery;
 
     //----------
 
@@ -42,11 +49,11 @@ public class Orders {
         this.orderDate = orderDate;
     }
 
-    public Status getOrderStatus() {
+    public OrderStatus getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(Status orderStatus) {
+    public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
     }
 }
